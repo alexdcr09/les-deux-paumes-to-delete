@@ -50,13 +50,13 @@ export default {
     methods: {
         async fetchVideosAnimes() {
             const response = await axios
-                .get('http://localhost:3000/videos/categories/1')
+                .get('https://les-deux-paumes-api.herokuapp.com/videos/categories/1')
                     this.videosAnimes = response.data
                     console.log(response)
         },
         fetchVideosActivites() {
             axios
-                .get('http://localhost:3000/videos/categories/2')
+                .get('https://les-deux-paumes-api.herokuapp.com/videos/categories/2')
                 .then(response => {
                     this.videosActivites = response.data
                     console.log(response)
@@ -64,7 +64,7 @@ export default {
         },
         fetchVideosMusique() {
             axios
-                .get('http://localhost:3000/videos/categories/3')
+                .get('https://les-deux-paumes-api.herokuapp.com/videos/categories/3')
                 .then(response => {
                     this.videosMusique = response.data
                     console.log(response)
